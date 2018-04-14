@@ -1,0 +1,106 @@
+*:focus{
+    outline: none;
+}
+.content_form{
+    width: 70%;
+    position: absolute;
+    top: 20%;
+    left: 35%;
+}
+.tree{
+    position: relative;
+    top: 420px;
+    left: 260px;
+}
+.content_form h2,.content_form span{
+    font-family: "Apple Color Emoji";
+}
+.form_hint{
+    font-size: 11px;
+}
+.content_form ul{
+    width: 750px;
+    list-style: none;
+    margin: 0 ;
+    padding: 0;
+}
+.content_form li{
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    position: relative;
+}
+.content_form li:first-child,.content_form li:last-child{
+    border-bottom: 1px solid #777;
+}
+.content_form h2{
+    margin: 0;
+}
+.content_form span{
+    width: 150px;
+    margin-top: 3px;
+    display: inline-block;
+    padding: 3px;
+}
+.usually input{
+    height: 20px;
+    width: 220px;
+    padding: 5px 8px;
+}
+.content_form textarea{
+    padding: 8px;
+    width: 300px;
+}
+.content_form button{
+    margin-left: 156px;
+}
+.special input{
+    height: 15px;
+    width: 40px;
+    padding: 5px 8px;
+}
+.usually input,.usually textarea {
+    background: #fff url("../images/attention.png") no-repeat 98% center;
+    border: 1px solid #aaa;
+    box-shadow: 0 0 3px #ccc,0 10px 15px #eee inset;
+    border-radius: 2px;
+    transition: padding .5s;
+}
+.usually input:focus,.usually textarea:focus{
+    background: #f6f6f6;
+    border: 1px solid #555;
+    box-shadow: 0 0 3px #aaa;
+    padding-right: 70px;
+}
+button.submit{
+    background-color: #68b12f;
+    background: linear-gradient(top,#68b12f,#50911e);
+    border: 1px solid #509111;
+    border-bottom: 1px solid #5b992b;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 0 0 #9fd574;
+    color: #fff;
+    font-weight: bold;
+    padding: 6px 20px;
+    text-align: center;
+    text-shadow: 0 -1px 0 #396715;
+}
+button .submit:hover{
+    opacity: 0.85;
+    cursor: pointer;
+}
+button .submit:active{
+    border: 1px solid #20911e;
+    box-shadow: 0 0 10px 5px #356b0b inset;
+}
+.usually input:focus:invalid,.usually textarea:focus:invalid{
+    background: #fff url(../images/warn.png) no-repeat 98% center;
+    box-shadow: 0 0 5px #d45252;
+    border-color: #b03535;
+}.usually input:focus:valid,.usually textarea:focus:valid{
+    background: #fff url(../images/right.png) no-repeat 98% center;
+    box-shadow: 0 0 5px #d45252;
+    border-color: #28921f;
+}
+
+
+

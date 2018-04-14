@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.bootcss.com/fullPage.js/2.9.6/jquery.fullpage.min.css" rel="stylesheet">
+</head>
+
+<body>
+<div id="fullpage">
+    <div class="section section1">
+        <h1>它，终于来了.</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At corporis deleniti doloribus et eum exercitationem fuga laborum libero molestiae nostrum odio odit omnis, perferendis porro quasi reprehenderit sed tempore velit!</p>
+        <a href="#">进一步了解</a>
+    </div>
+    <div class="section section2">
+        <h1>真正与你贴近的产品</h1>
+        <a href="#">进一步了解</a>
+        <img src="img/technology_hero_large_2x.jpg"/>
+    </div>
+    <div class="section section3">
+        <h1>非同一般的精准计时</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A blanditiis dignissimos, dolorem dolores ducimus enim eos, ex excepturi, itaque minus obcaecati quasi repellendus rerum sed sint sit velit vero voluptas!</p>
+        <a href="#">进一步了解</a>
+        <img src="img/timekeeping_hero_large_2x.jpg"/>
+    </div>
+    <div class="section section4">
+        <h1>在三个特点鲜明的系列中找到你的风格</h1>
+        <div class="row">
+            <div class="column">
+            <img src="img/primary_large_2x.jpg" class="primary1" alt="">
+            <h4 class="primary"></h4>
+              <div class="info">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aperiam consequatur facilis inventore magni minima nam nihil officiis pariatur possimus quaerat quam, qui quia quibusdam quos ratione sed tempore totam!
+                </p>
+                <a href="#" class="more">了解更多</a>
+              </div>
+            </div>
+            <div class="column">
+                <img src="img/primary_large_2x.jpg" class="primary2" alt="">
+                <h4 class="primary"></h4>
+                <div class="info">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aperiam consequatur facilis inventore magni minima nam nihil officiis pariatur possimus quaerat quam, qui quia quibusdam quos ratione sed tempore totam!
+                    </p>
+                    <a href="#" class="more">了解更多</a>
+                </div>
+            </div>
+            <div class="column">
+                <img src="img/primary_large_2x.jpg" class="primary3" alt="">
+                <h4 class="primary"></h4>
+                <div class="info">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aperiam consequatur facilis inventore magni minima nam nihil officiis pariatur possimus quaerat quam, qui quia quibusdam quos ratione sed tempore totam!
+                    </p>
+                    <a href="#" class="more">了解更多</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/fullPage.js/2.9.6/jquery.fullpage.min.js"></script>
+<script src="https://cdn.bootcss.com/move.js/0.5.0/move.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#fullpage').fullpage({
+            verticalCentered: false,
+            anchors: ['page1', 'page2', 'page3', 'page4'],
+            navigation: true,
+            navigationTooltips: ['say', 'say2', 'say3', 'say4'],
+            afterLoad: function (anchorLink, index) {
+                switch(index) {
+                    case 1:
+                        move('.section1 h1').scale(1.5).end();
+                        move('.section1 p').set('margin-top','5%').end();
+                        break;
+                    case 2:
+                        move('.section2 h1').scale(.5).end();
+                        // move('.section2 p').set('margin-top','5%').end();
+                        break;
+                    case 3:
+                         move('.section3 p').set('margin-left','20%').end();
+                         move('.section3 h1').set('margin-left','20%').end();
+                        break;
+                    case 4:
+                        move('.section4 h1').scale(.8).end();
+                        move('.section4 img.primary1').rotate(360).end(function(){
+                            move('.section4 img.primary2').rotate(360).end(function (){
+                                move('.section4 img.primary3').rotate(360).end(function () {
+                                });
+                            });
+                        });
+                        break;
+                    default:
+                        break;
+                }
+            }
+        })
+    })
+</script>
+</body>
+</html>
