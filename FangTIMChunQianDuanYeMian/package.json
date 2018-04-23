@@ -2,7 +2,7 @@
   "name": "FangTIMChunQianDuanYeMian",
   "version": "1.0.0",
   "description": "模仿TIM的纯前端web界面，使用vue-cli。",
-  "author": "wang",
+  "author": "Huhui-coder",
   "private": true,
   "ESlint": "4.11.0",
   "scripts": {
